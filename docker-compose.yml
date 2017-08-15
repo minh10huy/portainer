@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  main:
+    image: portainer/portainer
+    ports:
+      - "10001:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: -H unix:///var/run/docker.sock

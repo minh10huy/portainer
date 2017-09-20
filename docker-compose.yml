@@ -1,0 +1,13 @@
+version: '2'
+services:
+  rpi-portainer:
+    container_name: rpi-portainer
+    image: portainer/portainer
+    restart: always
+    port: 
+      - "10001:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/pirate/docker/portainer:/data
+    
+  
